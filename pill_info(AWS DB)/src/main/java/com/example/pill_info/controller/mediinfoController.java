@@ -11,20 +11,24 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-@Controller
+
+
+@RestController
 public class mediinfoController {
     @Autowired
     private mediinfoRepository infoRepository;
+
     @PostMapping("/api")
-    public String load_save(@RequestParam("date")String date, Model model) {
+    public String load_save() {
         String key = "mRmkUgxI6V2dJrv%2BYEdvvULX49q%2Fdme1Px7TMAV1hXuWyAXYjtr37jwZB1HFu%2FV0fFgRQB92IAe2RxwRDK3Akw%3D%3D";
         String result = "";
-
+        String jsonPrintString = null;
         try {
             for(int i = 1; i < 85; i++) {
                 URL url = new URL("http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcInfoList01?serviceKey=" + key + "&type=json&numOfRows=300&pageNo=" + i);
@@ -44,12 +48,12 @@ public class mediinfoController {
                             String.valueOf(tmp.get("COLOR_CLASS1")),String.valueOf(tmp.get("COLOR_CLASS2")),String.valueOf(tmp.get("LINE_FRONT")),String.valueOf(tmp.get("LINE_BACK")),String.valueOf(tmp.get("CLASS_NO")),String.valueOf(tmp.get("CLASS_NAME"))
                             ,String.valueOf(tmp.get("ITEM_PERMIT_DATE")),String.valueOf(tmp.get("FORM_CODE_NAME")));
                     infoRepository.save(pillObj);
-
+                    jsonPrintString = tmp.toString();
                 }
             }
         }catch (Exception e) {
             e.printStackTrace();
         }
-        return "redirect:/findname";
+        return jsonPrintString;
     }
 }

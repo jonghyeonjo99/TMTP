@@ -14,7 +14,7 @@ public class mediinfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String ITEM_SEQ;
-    private mediinfo() {}
+    private  mediinfo() {}
     private String ITEM_NAME;
     private String ITEM_IMAGE;
     private String PRINT_FRONT;
