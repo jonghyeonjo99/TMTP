@@ -24,7 +24,7 @@ public class mediinfoController {
     @Autowired
     private mediinfoRepository infoRepository;
 
-    @PostMapping("/api")
+    @GetMapping("/api")
     public String load_save() {
         String key = "mRmkUgxI6V2dJrv%2BYEdvvULX49q%2Fdme1Px7TMAV1hXuWyAXYjtr37jwZB1HFu%2FV0fFgRQB92IAe2RxwRDK3Akw%3D%3D";
         String result = "";
