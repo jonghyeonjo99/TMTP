@@ -16,14 +16,14 @@ public class epillinfo {
     private String useMethodQesitm;
     private String atpnWarnQesitm;
     private String atpnQesitm;
-    private String itrcQesitm;
+    private String intrcQesitm;
     private String seQesitm;
     private String depositMethodQesitm;
     private String itemImage;
 
     public epillinfo (String entpName,String itemName,String itemSeq,String efcyQesitm,
                       String useMethodQesitm,String atpnWarnQesitm,String atpnQesitm,
-                      String itrcQesitm,String seQesitm,String depositMethodQesitm,String itemImage) {
+                      String intrcQesitm,String seQesitm,String depositMethodQesitm,String itemImage) {
         super();
         this.entpName=entpName;
         this.itemName=itemName;
@@ -32,7 +32,7 @@ public class epillinfo {
         this.useMethodQesitm=useMethodQesitm;
         this.atpnWarnQesitm=atpnWarnQesitm;
         this.atpnQesitm=atpnQesitm;
-        this.itrcQesitm=itrcQesitm;
+        this.intrcQesitm=intrcQesitm;
         this.seQesitm=seQesitm;
         this.depositMethodQesitm=depositMethodQesitm;
         this.itemImage=itemImage;
