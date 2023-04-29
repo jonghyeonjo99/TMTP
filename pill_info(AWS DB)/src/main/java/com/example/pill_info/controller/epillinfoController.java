@@ -7,7 +7,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
@@ -46,7 +45,7 @@ public class epillinfoController {
                             String.valueOf(tmp.get("useMethodQesitm")),
                             String.valueOf(tmp.get("atpnWarnQesitm")),
                             String.valueOf(tmp.get("atpnQesitm")),
-                            String.valueOf(tmp.get("itrcQesitm")),
+                            String.valueOf(tmp.get("intrcQesitm")),
                             String.valueOf(tmp.get("seQesitm")),
                             String.valueOf(tmp.get("depositMethodQesitm")),
                             String.valueOf(tmp.get("itemImage")));
