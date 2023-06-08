@@ -1,6 +1,6 @@
 # TMTP_backend
 
-* 의약품 정보 API 관련
+## 의약품 정보 API 관련
 
 - 공공데이터포털에서 의약품에 대한 openAPI 활용신청(식별정보, 개요정보)
 
@@ -12,7 +12,7 @@
 - AWS RDS를 AWS EC2서버에 연결하여 RDS의 데이터베이스에 담긴 정보를 RESTAPI형태로 배포
 
 
-* SERVER 구축
+## SERVER 구축
 
 - AWS RDS서버에 데이터베이스(MariaDB)를 만들어 openAPI에서 필요한 정보를 가져와 저장하였다.
   -> 항상 openAPI를 조회하게 되면 웹페이지의 로딩시간이 굉장히 오래걸렸기 때문.
